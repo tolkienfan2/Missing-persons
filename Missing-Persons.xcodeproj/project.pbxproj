@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12AD7ADAAE8EE880B268012A /* Pods_Missing_Persons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CF6A84C8FEDA2D2DCDAD3A /* Pods_Missing_Persons.framework */; };
 		45CDC87B1D3305BB0040DE5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDC87A1D3305BB0040DE5B /* AppDelegate.swift */; };
 		45CDC87D1D3305BB0040DE5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDC87C1D3305BB0040DE5B /* ViewController.swift */; };
 		45CDC8801D3305BB0040DE5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CDC87E1D3305BB0040DE5B /* Main.storyboard */; };
 		45CDC8821D3305BB0040DE5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CDC8811D3305BB0040DE5B /* Assets.xcassets */; };
 		45CDC8851D3305BB0040DE5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45CDC8831D3305BB0040DE5B /* LaunchScreen.storyboard */; };
+		45CDC88D1D330CC30040DE5B /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDC88C1D330CC30040DE5B /* PersonCell.swift */; };
+		45CDC8921D3337BC0040DE5B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDC8911D3337BC0040DE5B /* Person.swift */; };
+		45CDC8941D3338880040DE5B /* FaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CDC8931D3338880040DE5B /* FaceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35CF6A84C8FEDA2D2DCDAD3A /* Pods_Missing_Persons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Missing_Persons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CDC8771D3305BB0040DE5B /* Missing-Persons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Missing-Persons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45CDC87A1D3305BB0040DE5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45CDC87C1D3305BB0040DE5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,12 @@
 		45CDC8811D3305BB0040DE5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45CDC8841D3305BB0040DE5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45CDC8861D3305BB0040DE5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45CDC88C1D330CC30040DE5B /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		45CDC88E1D3335690040DE5B /* Missing-Persons-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Missing-Persons-Bridging-Header.h"; sourceTree = "<group>"; };
+		45CDC8911D3337BC0040DE5B /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		45CDC8931D3338880040DE5B /* FaceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceService.swift; sourceTree = "<group>"; };
+		86B1E43D4F6D44991BB6B827 /* Pods-Missing-Persons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Missing-Persons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Missing-Persons/Pods-Missing-Persons.debug.xcconfig"; sourceTree = "<group>"; };
+		A4F0C362D3400D3AC1E07F2E /* Pods-Missing-Persons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Missing-Persons.release.xcconfig"; path = "Pods/Target Support Files/Pods-Missing-Persons/Pods-Missing-Persons.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +40,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12AD7ADAAE8EE880B268012A /* Pods_Missing_Persons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4552D5FE1D35C59C006CC593 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45CDC87E1D3305BB0040DE5B /* Main.storyboard */,
+				45CDC8831D3305BB0040DE5B /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4552D5FF1D35C5F8006CC593 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45CDC8911D3337BC0040DE5B /* Person.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4552D6001D35C61A006CC593 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45CDC87A1D3305BB0040DE5B /* AppDelegate.swift */,
+				45CDC87C1D3305BB0040DE5B /* ViewController.swift */,
+				45CDC88C1D330CC30040DE5B /* PersonCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		45CDC86E1D3305BB0040DE5B = {
 			isa = PBXGroup;
 			children = (
 				45CDC8791D3305BB0040DE5B /* Missing-Persons */,
 				45CDC8781D3305BB0040DE5B /* Products */,
+				68B56BEBB2A93D635F7CCC83 /* Pods */,
+				F1F4C3DBF7F5E9F8D49F0EF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +95,32 @@
 		45CDC8791D3305BB0040DE5B /* Missing-Persons */ = {
 			isa = PBXGroup;
 			children = (
-				45CDC87A1D3305BB0040DE5B /* AppDelegate.swift */,
-				45CDC87C1D3305BB0040DE5B /* ViewController.swift */,
-				45CDC87E1D3305BB0040DE5B /* Main.storyboard */,
+				4552D6001D35C61A006CC593 /* Controller */,
+				4552D5FF1D35C5F8006CC593 /* Model */,
+				4552D5FE1D35C59C006CC593 /* View */,
 				45CDC8811D3305BB0040DE5B /* Assets.xcassets */,
-				45CDC8831D3305BB0040DE5B /* LaunchScreen.storyboard */,
 				45CDC8861D3305BB0040DE5B /* Info.plist */,
+				45CDC88E1D3335690040DE5B /* Missing-Persons-Bridging-Header.h */,
+				45CDC8931D3338880040DE5B /* FaceService.swift */,
 			);
 			path = "Missing-Persons";
+			sourceTree = "<group>";
+		};
+		68B56BEBB2A93D635F7CCC83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86B1E43D4F6D44991BB6B827 /* Pods-Missing-Persons.debug.xcconfig */,
+				A4F0C362D3400D3AC1E07F2E /* Pods-Missing-Persons.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1F4C3DBF7F5E9F8D49F0EF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35CF6A84C8FEDA2D2DCDAD3A /* Pods_Missing_Persons.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45CDC8891D3305BB0040DE5B /* Build configuration list for PBXNativeTarget "Missing-Persons" */;
 			buildPhases = (
+				C9DAFB8393DF5E54542D5623 /* 📦 Check Pods Manifest.lock */,
 				45CDC8731D3305BB0040DE5B /* Sources */,
 				45CDC8741D3305BB0040DE5B /* Frameworks */,
 				45CDC8751D3305BB0040DE5B /* Resources */,
+				205543AEA7E8C889B0D3EFD2 /* 📦 Embed Pods Frameworks */,
+				6082CB260D8BBF33FA739CF3 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +192,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		205543AEA7E8C889B0D3EFD2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Missing-Persons/Pods-Missing-Persons-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6082CB260D8BBF33FA739CF3 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Missing-Persons/Pods-Missing-Persons-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9DAFB8393DF5E54542D5623 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		45CDC8731D3305BB0040DE5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45CDC8941D3338880040DE5B /* FaceService.swift in Sources */,
+				45CDC88D1D330CC30040DE5B /* PersonCell.swift in Sources */,
 				45CDC87D1D3305BB0040DE5B /* ViewController.swift in Sources */,
+				45CDC8921D3337BC0040DE5B /* Person.swift in Sources */,
 				45CDC87B1D3305BB0040DE5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,23 +362,30 @@
 		};
 		45CDC88A1D3305BB0040DE5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86B1E43D4F6D44991BB6B827 /* Pods-Missing-Persons.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Missing-Persons/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.CreativeIce.Missing-Persons";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Missing-Persons/Missing-Persons-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		45CDC88B1D3305BB0040DE5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4F0C362D3400D3AC1E07F2E /* Pods-Missing-Persons.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Missing-Persons/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.CreativeIce.Missing-Persons";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Missing-Persons/Missing-Persons-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -288,6 +408,7 @@
 				45CDC88B1D3305BB0040DE5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
